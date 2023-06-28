@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+    font-family: sans-serif;
+}
+.warper{
+  display: flex;
+}
+.warper .first-text{
+  font-size: 60px;
+  color: white;
+}
+.sec-text{
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+.sec-text li{
+    position: relative;
+    top: 0;
+    font-size: 60px;
+    color: aqua;
+    list-style: none;
+    padding: 0 20px;
+    text-shadow: 0 0 10px aqua;
+    animation: slideUpText 12s steps(4) infinite, colorful 6s infinite;/*steps(4) 4te line upore uthbe**/
+}
+@keyframes slideUpText{
+    100%{
+        top:-360px;
+    }
+}
+
+@keyframes colorful{
+     100%{
+        filter:hue-rotate(360deg);
+     }
+}
+.sec-text li span{
+    position: relative;
+}
+.sec-text li span::before{
+    content:  '';
+    background: black;
+    position: absolute;
+    width: 400px;
+    height: 90px;
+    left: 0;
+    border-left: 2px solid aqua;
+    animation: typing 1.5s steps(10) infinite alternate;/*alternate  animation is forord and backword line // steps(10) 10 ta word*/ 
+}
+@keyframes typing{
+100%{
+    left:100%;
+    margin: 0 -35px 0 35px;
+}
+}

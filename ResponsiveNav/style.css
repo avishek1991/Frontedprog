@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+} 
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background: url(background.jpg) no-repeat;
+background-size: cover;
+background-position: center;
+}
+
+
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 13px 100px;
+    background: rgb(255, 255,255,.1);
+    border-bottom: 2px solid rgba(255, 255 ,255, .2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    backdrop-filter: blur(10px);;
+}
+
+/****navbar lighting*********8*/
+header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background: linear-gradient(90deg,transparent,rgba(225,225,225,.4));
+    transition:.5s;
+}
+header:hover::before{
+    transition:.5s;
+    left:100%;
+}
+
+
+.logo{
+    color: white;
+    font-size: 2em;
+    user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight:500;
+    margin-left: 40px;
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+   
+}
+
+#menu-icon{
+    color: #ffffff;
+    font-size: 35px;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width:724px ){
+    header{
+        padding: .5rem 4%;
+    }
+
+    #menu-icon{
+        display: block;
+        margin: 0 20px;
+    }
+
+    .navigation{
+        position: fixed;
+        top:100%;
+        width:100%;
+        left:0;     
+        background: rgb(255, 255,255,.1);
+        border-bottom: 2px solid rgba(255, 255 ,255, .2);
+        /****display: none;***/
+        /**** transform: scale(0);*****/
+        /**** transform: scaleX(0);***pase pase khulbe  bondho hobe**/
+        /**** transform: scaleY(0);***upor niche khulbe  bondho hobe**/ 
+        transform: scale(0);
+        transition: .2s;
+    }
+
+    .navigation a {
+        display: block;
+        margin: 1.5rem 5%;
+    }
+}
+
+.active{
+    /****display:block;****/
+    transform: scale(1);
+}

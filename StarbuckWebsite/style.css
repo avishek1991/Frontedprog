@@ -1,0 +1,139 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+   /**font-family: 'Poppins', sans-serif;**/ 
+   font-family: system-ui;
+
+} 
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+
+}
+header{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    padding: 6px 120px;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.logonav img{
+  position: relative;
+  max-width: 64px;
+}
+
+.navigation a {  
+    font-size:18px;
+    color: rgb(8, 8, 8);
+    text-decoration: none;
+    font-weight:500;
+    margin-left: 40px;
+    transition: .3s;
+}
+
+ .navigation a:hover{
+    color: rgb(134, 199, 252);
+ }
+ .content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 50px;
+ }
+ .textbox{
+    position: relative;
+    max-width: 600px;
+ }
+
+ .textbox h2{
+    color:#333 ;
+    font-size: 4em;
+    line-height: 1.4em;
+    font-weight:500;
+ }
+ .textbox span{
+    color:#017143;
+    font-size: 1.2em;
+    font-weight: 900;
+ }
+.description {
+    color: #333;
+    justify-content: center;
+ }
+ .textbox a{
+    display: inline-block;
+    margin-top: 20px;
+    padding:8px 20px;
+    background: #017143;
+    color: #fff;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+ }
+.imageBox{
+   width: 600px;
+   display: flex;
+   justify-content: flex-end;
+   padding-right: 50px;
+}
+
+ .thumb{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+ }
+ .thumb li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: .3s;
+ }
+ .thumb li:hover{
+    transform: translateY(-15px);
+ }
+ .thumb li img{
+    max-width: 60px;
+ }
+ .sci{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+ .sci li{
+    list-style: none;
+ }
+ .sci li a{
+   display: inline-block;
+   margin: 5px 0px;
+   transform: scale(0.6);
+   filter: invert(1);;
+}
+.circle{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: #017143;
+   clip-path: circle(600px at right 800px);
+}
